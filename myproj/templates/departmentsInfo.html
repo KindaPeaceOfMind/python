@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кафедры университета</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .department { margin-bottom: 40px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .dept-header { font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px; }
+        .head-info { margin: 5px 0; color: #666; }
+        .section-title { font-weight: bold; margin: 15px 0 10px 0; color: #4CAF50; }
+        .teacher-list, .program-list { list-style-type: none; padding-left: 20px; }
+        .teacher-list li { margin: 3px 0; }
+        .program-list li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Кафедры университета</h1>
+    
+    {% for dept in departments %}
+    <div class="department">
+        <div class="dept-header">ID: {{ dept.id }} | Кафедра: {{ dept.name }}</div>
+        
+        <div class="head-info">
+            Заф. кафедры: {{ dept.head.lastname }} {{ dept.head.firstname }} {{ dept.head.middlename }} 
+            (таб.{{ dept.head.tab_number }})
+        </div>
+        
+        <div class="section-title">Преподаватели:</div>
+        <ol class="teacher-list">
+            {% for teacher in dept.teachers %}
+            <li>
+                {{ teacher.lastname }} {{ teacher.firstname }} {{ teacher.middlename }} 
+                (таб.{{ teacher.tab_number }}, {{ teacher.position }})
+            </li>
+            {% empty %}
+            <li>Нет данных</li>
+            {% endfor %}
+        </ol>
+        
+        <div class="section-title">Образовательные программы:</div>
+        <ul class="program-list">
+            {% for prog in dept.programs %}
+            <li>
+                {{ prog.number }} ({{ prog.name }}, {{ prog.discipline }})
+            </li>
+            {% empty %}
+            <li>Нет программ</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% empty %}
+    <p>Данные о кафедрах не найдены.</p>
+    {% endfor %}
+    
+    <p><a href="/">← На главную</a></p>
+</body>
+</html>

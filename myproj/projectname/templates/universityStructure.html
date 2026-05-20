@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Структура университета</title>
+    <style>
+        body { font-family: 'Courier New', monospace; margin: 20px; background: #f9f9f9; }
+        .tree { margin: 20px 0; }
+        .node { margin: 5px 0; }
+        .university { font-weight: bold; font-size: 1.2em; color: #2c3e50; }
+        .section { color: #34495e; margin: 10px 0; }
+        .unit { color: #2980b9; }
+        .head { color: #7f8c8d; font-style: italic; }
+        .indent-1 { margin-left: 20px; }
+        .indent-2 { margin-left: 40px; }
+        .indent-3 { margin-left: 60px; }
+        .indent-4 { margin-left: 80px; }
+        .indent-5 { margin-left: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Структура университета</h1>
+    <div class="tree">
+        <!-- Университет -->
+        <div class="node university">
+            Университет {{ university.name }} 
+            <span class="head">({{ get_initials university.rector.lastname }} {{ university.rector.firstname|slice:":1" }}.{{ university.rector.middlename|slice:":1" }}.)</span>
+        </div>
+        
+        <!-- Административные подразделения -->
+        <div class="node section indent-1">
+            |_Административные подразделения:
+        </div>
+        {% for unit in university.administrative_units %}
+        <div class="node unit indent-2">
+            | |_{{ unit.name }} ({{ unit.id }})
+            <span class="head">({{ get_initials unit.head.lastname }} {{ unit.head.firstname|slice:":1" }}.{{ unit.head.middlename|slice:":1" }}.)</span>
+        </div>
+        {% endfor %}
+        
+        <!-- Научно-образовательные подразделения -->
+        <div class="node section indent-1">
+            |
+        </div>
+        <div class="node section indent-1">
+            |_Научно-образовательные подразделения:
+        </div>
+        
+        {% for mega in university.scientific_educational_units %}
+        <!-- Мегафакультет -->
+        <div class="node unit indent-2">
+            |_Мегафакультет {{ mega.name }} ({{ mega.id }})
+            <span class="head">({{ get_initials mega.head.lastname }} {{ mega.head.firstname|slice:":1" }}.{{ mega.head.middlename|slice:":1" }}.)</span>
+        </div>
+        
+        <!-- Факультеты -->
+        {% for faculty in mega.faculties %}
+        <div class="node unit indent-3">
+            | |_Факультет {{ faculty.name }} ({{ faculty.id }})
+            <span class="head">({{ get_initials faculty.head.lastname }} {{ faculty.head.firstname|slice:":1" }}.{{ faculty.head.middlename|slice:":1" }}.)</span>
+        </div>
+        
+        <!-- Кафедры -->
+        {% for dept in faculty.departments %}
+        <div class="node unit indent-4">
+            | | |_Кафедра {{ dept.name }} ({{ dept.id }})
+            <span class="head">({{ get_initials dept.head.lastname }} {{ dept.head.firstname|slice:":1" }}.{{ dept.head.middlename|slice:":1" }}.)</span>
+        </div>
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+    </div>
+    
+    <p><a href="/">← На главную</a></p>
+</body>
+</html>

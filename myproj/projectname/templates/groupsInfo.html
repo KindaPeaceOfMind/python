@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Студенты групп</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .group-title { color: #4CAF50; margin: 20px 0 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Студенты учебных групп</h1>
+    
+    {% for group in groups %}
+    <h3 class="group-title">Группа {{ group.group_name }}</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Табельный номер</th>
+                <th>Студент</th>
+                <th>Стипендия</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in group.students %}
+            <tr>
+                <td>{{ student.tab_number }}</td>
+                <td>{{ student.fullname }}</td>
+                <td>
+                    {% if student.scholarship %}
+                        {{ student.scholarship|floatformat:0 }} ₽
+                    {% else %}
+                        —
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% empty %}
+    <p>Данные о группах не найдены.</p>
+    {% endfor %}
+    
+    <p><a href="/">← На главную</a></p>
+</body>
+</html>

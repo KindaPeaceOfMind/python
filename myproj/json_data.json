@@ -1,0 +1,446 @@
+{
+  "name": "Университет ИТМО",
+  "location": {
+    "postal_code": "197101",
+    "city": "Санкт-Петербург",
+    "address": "Кронверкский пр., 49"
+  },
+  "rector": {
+    "tab_number": "00001",
+    "lastname": "Васильев",
+    "firstname": "Владимир",
+    "middlename": "Николаевич",
+    "position": "Ректор"
+  },
+  "administrative_units": [
+    {
+      "id": "admin_001",
+      "name": "Ректорат",
+      "head": {
+        "tab_number": "00001",
+        "lastname": "Васильев",
+        "firstname": "Владимир",
+        "middlename": "Николаевич",
+        "position": "Ректор"
+      },
+      "employees": [
+        {
+          "tab_number": "00101",
+          "lastname": "Петрова",
+          "firstname": "Анна",
+          "middlename": "Сергеевна",
+          "position": "Проректор по учебной работе"
+        },
+        {
+          "tab_number": "00102",
+          "lastname": "Смирнов",
+          "firstname": "Дмитрий",
+          "middlename": "Александрович",
+          "position": "Проректор по научной работе"
+        },
+        {
+          "tab_number": "00103",
+          "lastname": "Козлова",
+          "firstname": "Елена",
+          "middlename": "Викторовна",
+          "position": "Проректор по развитию"
+        }
+      ]
+    },
+    {
+      "id": "admin_002",
+      "name": "Бухгалтерия",
+      "head": {
+        "tab_number": "00201",
+        "lastname": "Иванова",
+        "firstname": "Мария",
+        "middlename": "Петровна",
+        "position": "Главный бухгалтер"
+      },
+      "employees": [
+        {
+          "tab_number": "00202",
+          "lastname": "Соколов",
+          "firstname": "Алексей",
+          "middlename": "Игоревич",
+          "position": "Бухгалтер"
+        },
+        {
+          "tab_number": "00203",
+          "lastname": "Новикова",
+          "firstname": "Ольга",
+          "middlename": "Дмитриевна",
+          "position": "Бухгалтер"
+        },
+        {
+          "tab_number": "00204",
+          "lastname": "Волков",
+          "firstname": "Сергей",
+          "middlename": "Владимирович",
+          "position": "Экономист"
+        }
+      ]
+    }
+  ],
+  "scientific_educational_units": [
+    {
+      "id": "mega_001",
+      "name": "Мегафакультет компьютерных технологий и управления",
+      "head": {
+        "tab_number": "10001",
+        "lastname": "Григорьев",
+        "firstname": "Александр",
+        "middlename": "Михайлович",
+        "position": "Декан мегафакультета"
+      },
+      "faculties": [
+        {
+          "id": "fac_001",
+          "name": "Факультет программной инженерии и компьютерной техники",
+          "head": {
+            "tab_number": "10101",
+            "lastname": "Лебедев",
+            "firstname": "Павел",
+            "middlename": "Андреевич",
+            "position": "Декан факультета"
+          },
+          "departments": [
+            {
+              "id": "dept_001",
+              "name": "Кафедра компьютерных технологий",
+              "head": {
+                "tab_number": "10111",
+                "lastname": "Морозов",
+                "firstname": "Иван",
+                "middlename": "Сергеевич",
+                "position": "Зав. кафедрой"
+              },
+              "teachers": [
+                {
+                  "tab_number": "10112",
+                  "lastname": "Федоров",
+                  "firstname": "Артём",
+                  "middlename": "Владимирович",
+                  "position": "Профессор"
+                },
+                {
+                  "tab_number": "10113",
+                  "lastname": "Попова",
+                  "firstname": "Наталья",
+                  "middlename": "Алексеевна",
+                  "position": "Доцент"
+                },
+                {
+                  "tab_number": "10114",
+                  "lastname": "Орлов",
+                  "firstname": "Максим",
+                  "middlename": "Дмитриевич",
+                  "position": "Старший преподаватель"
+                }
+              ],
+              "educational_programs": [
+                {
+                  "number": "09.03.04",
+                  "name": "Программная инженерия",
+                  "discipline": "Объектно-ориентированное программирование",
+                  "study_years": [
+                    {
+                      "year": "2016/2017",
+                      "groups": [
+                        {
+                          "name": "Q1234",
+                          "students": [
+                            {
+                              "tab_number": "20001",
+                              "lastname": "Сидоров",
+                              "firstname": "Андрей",
+                              "middlename": "Петрович",
+                              "scholarship": 10000
+                            },
+                            {
+                              "tab_number": "20002",
+                              "lastname": "Кузнецова",
+                              "firstname": "Анастасия",
+                              "middlename": "Игоревна",
+                              "scholarship": 10000
+                            },
+                            {
+                              "tab_number": "20003",
+                              "lastname": "Павлов",
+                              "firstname": "Кирилл",
+                              "middlename": "Александрович",
+                              "scholarship": null
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Q1235",
+                          "students": [
+                            {
+                              "tab_number": "20004",
+                              "lastname": "Егорова",
+                              "firstname": "Дарья",
+                              "middlename": "Сергеевна",
+                              "scholarship": 10000
+                            },
+                            {
+                              "tab_number": "20005",
+                              "lastname": "Захаров",
+                              "firstname": "Михаил",
+                              "middlename": "Владимирович",
+                              "scholarship": 12000
+                            },
+                            {
+                              "tab_number": "20006",
+                              "lastname": "Васильева",
+                              "firstname": "Софья",
+                              "middlename": "Андреевна",
+                              "scholarship": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "number": "09.03.01",
+                  "name": "Информатика и вычислительная техника",
+                  "discipline": "Алгоритмы и структуры данных",
+                  "study_years": [
+                    {
+                      "year": "2016/2017",
+                      "groups": [
+                        {
+                          "name": "Q2234",
+                          "students": [
+                            {
+                              "tab_number": "20007",
+                              "lastname": "Николаев",
+                              "firstname": "Даниил",
+                              "middlename": "Олегович",
+                              "scholarship": 10000
+                            },
+                            {
+                              "tab_number": "20008",
+                              "lastname": "Романова",
+                              "firstname": "Полина",
+                              "middlename": "Евгеньевна",
+                              "scholarship": 10000
+                            },
+                            {
+                              "tab_number": "20009",
+                              "lastname": "Белов",
+                              "firstname": "Тимофей",
+                              "middlename": "Артёмович",
+                              "scholarship": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "dept_002",
+              "name": "Кафедра информационной безопасности",
+              "head": {
+                "tab_number": "10121",
+                "lastname": "Виноградов",
+                "firstname": "Константин",
+                "middlename": "Николаевич",
+                "position": "Зав. кафедрой"
+              },
+              "teachers": [
+                {
+                  "tab_number": "10122",
+                  "lastname": "Соловьёва",
+                  "firstname": "Виктория",
+                  "middlename": "Александровна",
+                  "position": "Профессор"
+                },
+                {
+                  "tab_number": "10123",
+                  "lastname": "Козлов",
+                  "firstname": "Роман",
+                  "middlename": "Игоревич",
+                  "position": "Доцент"
+                },
+                {
+                  "tab_number": "10124",
+                  "lastname": "Медведева",
+                  "firstname": "Юлия",
+                  "middlename": "Дмитриевна",
+                  "position": "Старший преподаватель"
+                }
+              ],
+              "educational_programs": [
+                {
+                  "number": "10.05.01",
+                  "name": "Компьютерная безопасность",
+                  "discipline": "Криптографические методы защиты информации",
+                  "study_years": [
+                    {
+                      "year": "2016/2017",
+                      "groups": [
+                        {
+                          "name": "Q3234",
+                          "students": [
+                            {
+                              "tab_number": "20010",
+                              "lastname": "Алексеев",
+                              "firstname": "Глеб",
+                              "middlename": "Вячеславович",
+                              "scholarship": 12000
+                            },
+                            {
+                              "tab_number": "20011",
+                              "lastname": "Титова",
+                              "firstname": "Варвара",
+                              "middlename": "Максимовна",
+                              "scholarship": 12000
+                            },
+                            {
+                              "tab_number": "20012",
+                              "lastname": "Фролов",
+                              "firstname": "Ярослав",
+                              "middlename": "Андреевич",
+                              "scholarship": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fac_002",
+          "name": "Факультет фотоники и оптоинформатики",
+          "head": {
+            "tab_number": "10201",
+            "lastname": "Семенов",
+            "firstname": "Виктор",
+            "middlename": "Петрович",
+            "position": "Декан факультета"
+          },
+          "departments": [
+            {
+              "id": "dept_003",
+              "name": "Кафедра фотоники",
+              "head": {
+                "tab_number": "10211",
+                "lastname": "Борисов",
+                "firstname": "Антон",
+                "middlename": "Владимирович",
+                "position": "Зав. кафедрой"
+              },
+              "teachers": [
+                {
+                  "tab_number": "10212",
+                  "lastname": "Ефимова",
+                  "firstname": "Ксения",
+                  "middlename": "Сергеевна",
+                  "position": "Профессор"
+                },
+                {
+                  "tab_number": "10213",
+                  "lastname": "Гусев",
+                  "firstname": "Станислав",
+                  "middlename": "Александрович",
+                  "position": "Доцент"
+                },
+                {
+                  "tab_number": "10214",
+                  "lastname": "Кудрявцева",
+                  "firstname": "Марина",
+                  "middlename": "Ивановна",
+                  "position": "Старший преподаватель"
+                }
+              ],
+              "educational_programs": [
+                {
+                  "number": "12.03.03",
+                  "name": "Фотоника и оптоинформатика",
+                  "discipline": "Лазерные технологии",
+                  "study_years": [
+                    {
+                      "year": "2016/2017",
+                      "groups": [
+                        {
+                          "name": "Q4234",
+                          "students": [
+                            {
+                              "tab_number": "20013",
+                              "lastname": "Давыдов",
+                              "firstname": "Матвей",
+                              "middlename": "Романович",
+                              "scholarship": 10000
+                            },
+                            {
+                              "tab_number": "20014",
+                              "lastname": "Савельева",
+                              "firstname": "Алиса",
+                              "middlename": "Денисовна",
+                              "scholarship": 10000
+                            },
+                            {
+                              "tab_number": "20015",
+                              "lastname": "Тарасов",
+                              "firstname": "Лев",
+                              "middlename": "Максимович",
+                              "scholarship": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mega_002",
+      "name": "Мегафакультет трансляционных информационных технологий",
+      "head": {
+        "tab_number": "10002",
+        "lastname": "Никитин",
+        "firstname": "Евгений",
+        "middlename": "Сергеевич",
+        "position": "Декан мегафакультета"
+      },
+      "faculties": [
+        {
+          "id": "fac_003",
+          "name": "Факультет технологического менеджмента и инноваций",
+          "head": {
+            "tab_number": "10301",
+            "lastname": "Федотов",
+            "firstname": "Олег",
+            "middlename": "Викторович",
+            "position": "Декан факультета"
+          },
+          "departments": [
+            {
+              "id": "dept_004",
+              "name": "Кафедра управления инновациями",
+              "head": {
+                "tab_number": "10311",
+                "lastname": "Жукова",
+                "firstname": "Светлана",
+                "middlename": "Андреевна",
+                "position": "Зав. кафедрой"
+              },
+              "teachers": [
+                {
+                  "tab_number": "10312",
+                  "lastname": "Мельников"}]}]}]}]}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о дисциплине</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .info-block { margin-bottom: 15px; }
+        .label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Информация о дисциплине</h1>
+    
+    {% if program %}
+    <div class="info-block">
+        <span class="label">Номер программы:</span> {{ program.number }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Название программы:</span> {{ program.name }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Дисциплина:</span> {{ program.discipline }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Кафедра:</span> {{ program.department_name }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Год обучения:</span> 
+        {% for year in program.study_years %}
+            {{ year.year }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Кол-во групп:</span> {{ program.groups_count }}
+    </div>
+    {% else %}
+    <p>Информация о программе не найдена.</p>
+    {% endif %}
+    
+    <p><a href="/">← На главную</a></p>
+</body>
+</html>

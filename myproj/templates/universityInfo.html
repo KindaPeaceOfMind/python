@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация об университете</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .info-block { margin-bottom: 15px; }
+        .label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Информация об университете</h1>
+    
+    <div class="info-block">
+        <span class="label">Университет:</span> {{ university.name }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Ректор:</span> 
+        {{ university.rector.lastname }} {{ university.rector.firstname }} {{ university.rector.middlename }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Местоположение:</span> 
+        {{ university.location.postal_code }}, {{ university.location.city }}, {{ university.location.address }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Кол-во административных подразделений:</span> {{ admin_count }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Кол-во научно-образовательных подразделений:</span> {{ scientific_count }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Кол-во мегафакультетов:</span> {{ mega_faculties_count }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Кол-во факультетов:</span> {{ faculties_count }}
+    </div>
+    
+    <div class="info-block">
+        <span class="label">Кол-во кафедр:</span> {{ departments_count }}
+    </div>
+    
+    <p><a href="/">← На главную</a></p>
+</body>
+</html>
